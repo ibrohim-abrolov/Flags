@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country flags</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    
+    <!--   Header start   -->
+    <header class="site-header">
+        <div class="container">
+            <div class="site-header__wrapper d-flex align-items-center justify-content-between">
+                <h1 class="site-header__title m-0">
+                    Where in the world?
+                </h1>
+                <button class="site-header__mode-controller js-btn bg-transparent border-0" type="button" role="button">
+                    Dark Mode
+                </button>
+            </div>
+        </div>
+    </header>
+    <!--   Header finish  -->
+
+    <main class="site-main">
+        <!--   Hero start   -->
+        <section class="hero mt-4 mb-4">
+            <div class="container container-xl">
+                <form class="form js-form" action="/">
+                    <div class="form__wrapper d-flex flex-column row-gap-5 flex-md-row row-gap-md-0 justify-content-md-between">
+                        <input class="form__input js-search form-control" type="search" name="user_search" placeholder="Search for a country…" aria-label="Search for a country…" required>
+                        <select class="form__select form-select" name="continents" id="">
+                            <option class="form__option" value="">
+                                Filter by Region
+                            </option>
+                            <option class="form__option" value="Africa">
+                                Africa
+                            </option>
+                            <option class="form__option" value="America">
+                                America
+                            </option>
+                            <option class="form__option" value="Asia">
+                                Asia
+                            </option>
+                            <option class="form__option" value="Europe">
+                                Europe
+                            </option>
+                            <option class="form__option" value="Oceania">
+                                Oceania
+                            </option>
+                        </select>
+                    </div>
+                </form>
+                <div class="hero__bottom">
+                    <ul class="hero__list js-list d-flex flex-column row-gap-5 flex-sm-row flex-wrap column-gap-sm-4 column-gap-xl-3 mt-5">
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--   Hero finish   -->
+    </main>
+
+    <!--   Footer start   -->
+    <footer class="site-footer">
+        <div class="container"></div>
+    </footer>
+    <!--   Footer finish   -->
+    
+
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="./js/countries.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

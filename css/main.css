@@ -1,0 +1,271 @@
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito Sans';
+    font-weight: 400;
+    src: url('../fonts/nunito-sans-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito Sans';
+    font-weight: 600;
+    src: url('../fonts/nunito-sans-v15-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito Sans';
+    font-weight: 800;
+    src: url('../fonts/nunito-sans-v15-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito Sans';
+    font-weight: 300;
+    src: url('../fonts/nunito-sans-v15-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito Sans", "Arial", sans-serif;
+    background-color: #fafafa;
+    color: #111517;
+}
+
+.site-main {
+    flex-grow: 1;
+}
+
+img {
+    display: block;
+    height: auto;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+:root {
+    --main-text-color: #111517;
+    --secondary-text-color: #c4c4c4;
+    --main-bg-color: #fafafa;
+    --secondary-bg-color: #fff;
+}
+
+.dark {
+    --main-text-color: #fff;
+    --secondary-text-color: #fff;
+    --main-bg-color: #202c36;
+    --secondary-bg-color: #2b3844;
+}
+
+/* .dark .form__input {
+    background-image: url("/img/search-dark.svg");
+}
+
+.dark .form__select {
+    background-image: url("/img/down-arrow-dark.svg");
+} */
+
+.dark {
+    background-color: #202C36;
+}
+
+.site-header {
+    padding: 30px 0;
+    background-color: var(--secondary-bg-color);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+}
+
+.site-header__title {
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 800;
+    color: var(--main-text-color);
+}
+
+.site-header__mode-controller {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--main-text-color);
+}
+
+.site-header__mode-controller::before {
+    position: absolute;
+    z-index: 5;
+    top: 32px;
+    right: 92px;
+    display: block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("/images/ligth-mmon.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form__input {
+    padding: 15px 0 15px 50px;
+    color: var(--secondary-text-color);
+    font-size: 13px;
+    line-height: 20px;
+    background-color: var(--secondary-bg-color);
+    border-radius: 5px;
+    box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+}
+
+.form__input::placeholder {
+    color: var(--secondary-text-color);
+}
+
+.form__select {
+    max-width: 200px;
+    width: 100%;
+    padding: 15px 80px 15px 24px;
+    color: var(--main-text-color);
+    background-color: var(--secondary-bg-color);
+    box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.form__option {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.hero__items {
+    max-width: 264px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--secondary-bg-color);
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.03);
+    transition: transform 0.5s ease;
+}
+
+.hero__img {
+    max-width: 267px;
+    width: 100%;
+    height: 160px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.hero__inner {
+    padding: 15px 24px 46px 24px;
+}
+
+.hero__title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 800;
+    color: var(--main-text-color);
+}
+
+.hero__population,
+.hero__region,
+.hero__capital {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 300;
+    color: var(--main-text-color);
+}
+
+@media only screen and (min-width: 500px)  {
+    .site-header__mode-controller {
+        font-size: 16px;
+    }
+
+    .form__input {
+        max-width: 380px;
+        width: 100%;
+        font-size: 15px;
+    }
+    
+    .form__select {
+        max-width: 250px;
+        width: 100%;
+        font-size: 17px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .site-header__title {
+        font-size: 19px;
+    }
+    
+    .hero__items {
+        max-width: 230px;
+        width: 100%; 
+    }
+    
+    .hero__img {
+        max-width: 230px;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 730px) {
+    .site-header__title {
+        font-size: 21px;
+    }
+    
+    .site-header__mode-controller {
+        font-size: 18px;
+    }
+
+    .hero__items {
+        max-width: 264px;
+        width: 100%;
+    }
+    
+    .hero__img {
+        max-width: 270px;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1200px)  {
+    .site-header__title {
+        font-size: 24px;
+    }
+    
+    .hero {
+        padding-top: 48px;
+    }
+    
+    .form__input {
+        max-width: 480px;
+        width: 100%;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    
+    .hero__list {
+        padding-top: 48px;
+        row-gap: 70px !important;
+    }
+    
+    .hero__items:hover {
+        transform: scale(1.1);
+    }
+}
