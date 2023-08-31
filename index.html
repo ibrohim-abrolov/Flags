@@ -24,7 +24,7 @@
         </div>
     </header>
     <!--   Header finish  -->
-
+    
     <main class="site-main">
         <!--   Hero start   -->
         <section class="hero mt-4 mb-4">
@@ -58,19 +58,39 @@
                     <ul class="hero__list js-list d-flex flex-column row-gap-5 flex-sm-row flex-wrap column-gap-sm-4 column-gap-xl-3 mt-5">
                     </ul>
                 </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <span class="hero__population"></span>
+                                <span class="hero__region"></span>
+                                <span class="hero__capital"></span>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!--   Hero finish   -->
     </main>
-
+    
     <!--   Footer start   -->
     <footer class="site-footer">
         <div class="container"></div>
     </footer>
     <!--   Footer finish   -->
     
-
-    <!-- <script src="js/bootstrap.min.js"></script> -->
+    
+    <script src="js/bootstrap.min.js"></script>
     <script src="./js/countries.js"></script>
     <script src="./js/main.js"></script>
 </body>

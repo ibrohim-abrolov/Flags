@@ -34,10 +34,17 @@ const renderCountries = (array) => {
         const capitalElement = document.createElement("p");
         capitalElement.classList.add("hero__capital");
         capitalElement.innerHTML = `<strong>Capital:</strong> ${item.capital}`;
+
+        const moreAbout = document.createElement("button");
+        moreAbout.classList.add("hero__link");
+        moreAbout.textContent = "More About";
+        moreAbout.dataset.id = item.id;
+        moreAbout.setAttribute("data-bs-toggle", "modal");
+        moreAbout.setAttribute("data-bs-target", "#exampleModal");
         
         
         liEelement.append(imgElement, innerElement);
-        innerElement.append(titleElement, populationElement, regionElement, capitalElement);
+        innerElement.append(titleElement, populationElement, regionElement, capitalElement, moreAbout);
         elList.appendChild(liEelement);
     });
 };
@@ -56,13 +63,30 @@ elInput.addEventListener("keyup", (evt) => {
     renderCountries(filtered);
 });
 
+const modalTitle = document.querySelector(".modal-title");
+const modalPop = document.querySelector(".hero__population");
+const modalReg = document.querySelector(".hero__region");
+const modalCap = document.querySelector(".hero__capital");
+
+elList.addEventListener("click", (evt) => {
+    if(evt.target.matches(".modal-btn")) {
+        const btnId = evt.target.dataset.id;
+
+        const foundCountry = countries.find((item) => {
+            return item.id == btnId;
+        });
+
+        modalTitle.textContent = foundCountry.name;
+    }
+});
+
 function darkMode() {
     document.body.classList.add("dark");
     localStorage.setItem("mode", "dark");
     elModeBtn.textContent = "Light Mode";
 }
 
-function noDark() {
+function ligthMode() {
     document.body.classList.remove("dark");
     localStorage.setItem("mode", "light");
     elModeBtn.textContent = "Dark Mode";
@@ -71,17 +95,15 @@ function noDark() {
 if (localStorage.getItem("mode") == "dark") {
     darkMode();
 } else {
-    noDark();
+    ligthMode();
 }
 
 elModeBtn.addEventListener("click", function () {
     document.body.classList.toggle("dark");
-    // elHeader.classList.toggle("dark");
-
-    
+  
     if (document.body.classList.contains("dark")) {
         darkMode();
     } else {
-        noDark();
+        ligthMode();
     }
 });
