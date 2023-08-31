@@ -64,12 +64,13 @@ elInput.addEventListener("keyup", (evt) => {
 });
 
 const modalTitle = document.querySelector(".modal-title");
-const modalPop = document.querySelector(".hero__population");
-const modalReg = document.querySelector(".hero__region");
-const modalCap = document.querySelector(".hero__capital");
+const modalPop = document.querySelector(".population");
+const modalReg = document.querySelector(".region");
+const modalCap = document.querySelector(".capital");
+const modalLang = document.querySelector(".lang");
 
 elList.addEventListener("click", (evt) => {
-    if(evt.target.matches(".modal-btn")) {
+    if(evt.target.matches(".hero__link")) {
         const btnId = evt.target.dataset.id;
 
         const foundCountry = countries.find((item) => {
@@ -77,7 +78,11 @@ elList.addEventListener("click", (evt) => {
         });
 
         modalTitle.textContent = foundCountry.name;
-    }
+        modalPop.textContent = `Population: ${foundCountry.population}`;
+        modalReg.textContent = `Region: ${foundCountry.region}`;
+        modalCap.textContent = `Capital: ${foundCountry.capital}`;
+        modalLang.textContent = `Language: ${foundCountry.language}`;
+    };
 });
 
 function darkMode() {

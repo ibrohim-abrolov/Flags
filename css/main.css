@@ -188,11 +188,10 @@ ul {
 .hero__capital {
     margin-top: 0;
     margin-bottom: 8px;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 16px;
-    font-weight: 300;
     color: var(--main-text-color);
-}
+} 
 
 .hero__link {
     margin-top: 20px;
@@ -204,11 +203,37 @@ ul {
     border-radius: 5px;
 }
 
+.modal-content {
+    background-color: var(--secondary-bg-color);
+}
+
+.modal-title {
+    margin-left: auto;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--main-text-color);
+}
+
+.btn-close {
+    padding-left: 0;
+    background-color: var(--main-bg-color);
+}
+
+.modal-text {
+    margin: 7px 0;
+    font-size: 15px;
+    color: var(--main-text-color);
+}
+
+.modal-text:first-child {
+    margin-top: 0;
+}
+
 @media only screen and (min-width: 500px)  {
     .site-header__mode-controller {
         font-size: 16px;
     }
-
+    
     .form__input {
         max-width: 380px;
         width: 100%;
@@ -246,7 +271,7 @@ ul {
     .site-header__mode-controller {
         font-size: 18px;
     }
-
+    
     .hero__items {
         max-width: 264px;
         width: 100%;
@@ -256,9 +281,13 @@ ul {
         max-width: 270px;
         width: 100%;
     }
-
+    
     .hero__link {
         padding: 7px 10px;
+    }
+
+    .modal-text {
+        font-size: 18px;
     }
 }
 
@@ -270,6 +299,12 @@ ul {
     .hero {
         padding-top: 48px;
         padding-bottom: 48px;
+    }
+    
+    .hero__population,
+    .hero__region,
+    .hero__capital {
+        font-size: 17px;
     }
     
     .form__input {
@@ -287,8 +322,12 @@ ul {
     .hero__items:hover {
         transform: scale(1.1);
     }
-
+    
     .hero__link {
         padding: 10px 15px;
+    }
+
+    .modal-text {
+        font-size: 19px;
     }
 }

@@ -5,6 +5,7 @@ const countries = [
     population: "81,770,900",
     region: "Europe",
     capital: "Berlin",
+    language: "German/English",
     img: "./images/Germany.png",
   },
   {
@@ -13,6 +14,7 @@ const countries = [
     population: "323,947,000",
     region: "Americas",
     capital: "Washington, D.C.",
+    language: "English",
     img: "./images/USA.png",
   },
   {
@@ -21,6 +23,7 @@ const countries = [
     population: "206,135,893",
     region: "Americas",
     capital: "Brasilia",
+    language: "Brasil/Hunsrik",
     img: "./images/Brazil.png",
   },
   {
@@ -29,6 +32,7 @@ const countries = [
     population: "334,300",
     region: "Europe",
     capital: "Reykjavík",
+    language: "Scandinavian",
     img: "./images/Iceland.png",
   },
   {
@@ -37,6 +41,7 @@ const countries = [
     population: "27,657,145",
     region: "Asia",
     capital: "Kabul",
+    language: "Farsi",
     img: "./images/Afganistan.png"
   },
   {
@@ -45,6 +50,7 @@ const countries = [
     population: "28,875",
     region: "Europe",
     capital: "Mariehamn",
+    language: "Swedish",
     img: "./images/Icelands.png"
   },
   {
@@ -53,6 +59,7 @@ const countries = [
     population: "2,886,026",
     region: "Europe",
     capital: "Tirania",
+    language: "Albanian",
     img: "./images/Albania.png"
   },
   {
@@ -61,6 +68,7 @@ const countries = [
     population: "40,400,000",
     region: "Africa",
     capital: "Algiers",
+    language: "Afrosiatic",
     img: "./images/Algeria.png",
   },
 ];
