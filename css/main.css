@@ -193,6 +193,10 @@ ul {
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
+.hero__items:hover {
+    cursor: pointer;
+}
+
 .hero__img {
     max-width: 267px;
     width: 100%;
